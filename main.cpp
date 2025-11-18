@@ -13,7 +13,7 @@ using namespace std; // Permet d'utiliser les éléments standard (comme cout) s
 
 /**
  * @fn void afficherMenu()
- * @brief Affiche le menu de l'application pour accéder aux différentes fonctionnalités.
+ * @brief Affiche le menu de l'application.
  * @return void
  */
 void afficherMenu() {
@@ -28,52 +28,58 @@ void afficherMenu() {
 }
 
 /**
+ * @fn int choisirLog(int choixLog)
+ * @brief Choisir le log à afficher et/ou traiter.
+ * @param int choixLog : choix du log à afficher (saisi par l'utilisateur).
+ * @return int : Retourne 0 pour l'instant.
+ */
+int choisirLog(int choixLog) {
+    switch (choixLog) {
+        case 0:
+            cout << "Fermeture du programme..." << endl;
+            break;
+        case 1:
+            cout << "Lancement de l'analyse des logs Sudo" << endl;
+            break;
+        case 2:
+            cout << "Lancement de l'analyse des logs SSH" << endl;
+            break;
+        case 3:
+            cout << "Appel de pocoGetAllLog" << endl;
+            break;
+        case 4:
+            cout << "Appel de pocoGetOneLog" << endl;
+            break;
+        case 5:
+            cout << "Appel de pocoPostSSHLog" << endl;
+            break;
+        default:
+            cout << "Erreur : Option invalide !" << endl;
+            break;
+    }
+    return 0;
+}
+
+/**
  * @fn int main()
  * @brief Point d'entrée de l'application.
- * @details Affiche le titre du projet et le menu principal.
  * @return int 0 si le programme s'est terminé correctement.
  */
 int main() {
-    // Déclaration de la variable
     int choix;
 
-    // Affichage du titre du projet
     cout << "CIEL - Gestion centralisee de logs" << endl;
 
-    // Appel de la fonction d'affichage du menu
+    // 1. Affichage du menu
     afficherMenu();
 
-    // Etape 3 :
-    // Demande de saisie a l'utulisateur
+    // 2. Saisie utilisateur
     cout << "Votre choix : ";
     cin >> choix;
+    cout << "Vous avez choisi l'option : " << choix << endl;
 
+    // 3. Appel de la fonction choisirLog
+    choisirLog(choix);
 
-    // Affichage du choix selectionné pour v"rification
-    cout << "Votre choix est :" << choix << endl;
-
-    // Etape 4 : Gestion du choix avec if/else if
-    if (choix == 0) {
-        cout << "Sortir du programme" << endl;
-    }
-    else if (choix == 1) {
-        cout << "Afficher log sudo " << endl;
-    }
-    else if (choix == 2) {
-        cout << "Afficher et enregistrer log ssh" << endl;
-    }
-    else if (choix == 3) {
-        cout << "pocoGetAllLog" << endl;
-    }
-    else if (choix == 4) {
-        cout << "pocoGetOneLog" << endl;
-    }
-    else if (choix == 5) {
-        cout << "pocoPostSSHLog" << endl;
-    }
-    else {
-        // Etape 5 :gestion de l'erreur
-        cout << "Erreur : Option invalide !" << endl;
-    }
     return 0;
 }
