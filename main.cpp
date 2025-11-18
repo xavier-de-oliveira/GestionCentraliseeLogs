@@ -43,10 +43,12 @@ int main() {
     // Appel de la fonction d'affichage du menu
     afficherMenu();
 
+    // Etape 3
     // Demande de saisie a l'utulisateur
     cout << "Votre choix : ";
     cin >> choix;
 
+    // Etape 4
     // Affichage du choix selectionné pour v"rification
     cout << "Votre choix est :" << choix << endl;
     return 0;
