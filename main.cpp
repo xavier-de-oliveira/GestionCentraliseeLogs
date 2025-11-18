@@ -71,6 +71,9 @@ int main() {
     else if (choix == 5) {
         cout << "pocoPostSSHLog" << endl;
     }
-
+    else {
+        // Etape 5 :gestion de l'erreur
+        cout << "Erreur : Option invalide !" << endl;
+    }
     return 0;
 }
