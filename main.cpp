@@ -43,13 +43,34 @@ int main() {
     // Appel de la fonction d'affichage du menu
     afficherMenu();
 
-    // Etape 3
+    // Etape 3 :
     // Demande de saisie a l'utulisateur
     cout << "Votre choix : ";
     cin >> choix;
 
-    // Etape 4
+
     // Affichage du choix selectionné pour v"rification
     cout << "Votre choix est :" << choix << endl;
+
+    // Etape 4 : Gestion du choix avec if/else if
+    if (choix == 0) {
+        cout << "Sortir du programme" << endl;
+    }
+    else if (choix == 1) {
+        cout << "Afficher log sudo " << endl;
+    }
+    else if (choix == 2) {
+        cout << "Afficher et enregistrer log ssh" << endl;
+    }
+    else if (choix == 3) {
+        cout << "pocoGetAllLog" << endl;
+    }
+    else if (choix == 4) {
+        cout << "pocoGetOneLog" << endl;
+    }
+    else if (choix == 5) {
+        cout << "pocoPostSSHLog" << endl;
+    }
+
     return 0;
 }
