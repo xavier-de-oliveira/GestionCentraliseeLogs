@@ -34,11 +34,20 @@ void afficherMenu() {
  * @return int 0 si le programme s'est terminé correctement.
  */
 int main() {
+    // Déclaration de la variable
+    int choix;
+
     // Affichage du titre du projet
     cout << "CIEL - Gestion centralisee de logs" << endl;
 
     // Appel de la fonction d'affichage du menu
     afficherMenu();
 
+    // Demande de saisie a l'utulisateur
+    cout << "Votre choix : ";
+    cin >> choix;
+
+    // Affichage du choix selectionné pour v"rification
+    cout << "Votre choix est :" << choix << endl;
     return 0;
 }
