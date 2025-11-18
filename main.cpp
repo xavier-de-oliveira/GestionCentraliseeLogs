@@ -1,9 +1,44 @@
-#include <iostream>
+/**
+* @file main.cpp
+ * @brief Point d'entrée principal de l'application GestionLog.
+ * @author Xavier de-oliveira
+ * @version v1.0
+ * @class BTS-CIEL IR
+ * @date 18/11/2025
+ */
 
-using namespace std;
+#include <iostream> // Inclusion de la bibliothèque standard pour les entrées/sorties
 
-int main(){
-    cout << "Modele de projet" << endl;
-    return 0;
+using namespace std; // Permet d'utiliser les éléments standard (comme cout) sans préfixe std:
+
+/**
+ * @fn void afficherMenu()
+ * @brief Affiche le menu de l'application pour accéder aux différentes fonctionnalités.
+ * @return void
+ */
+void afficherMenu() {
+    cout << "Menu" << endl;
+    cout << " Choisir une option" << endl;
+    cout << "1 - Afficher log sudo" << endl;
+    cout << "2 - Afficher et enregistrer log ssh" << endl;
+    cout << "3 - pocoGetAllLog" << endl;
+    cout << "4 - pocoGetOneLog" << endl;
+    cout << "5 - pocoPostSSHLog" << endl;
+    cout << "0 - Sortir du programme" << endl;
 }
 
+/**
+ * @fn int main()
+ * @brief Point d'entrée de l'application.
+ * @details Affiche le titre du projet et le menu principal.
+ * @return int 0 si le programme s'est terminé correctement.
+ */
+int main() {
+    // Affichage du titre du projet
+    cout << "CIEL - Gestion centralisee de logs" << endl;
+
+    // Appel de la fonction d'affichage du menu
+    afficherMenu();
+
+    return 0;
+}
