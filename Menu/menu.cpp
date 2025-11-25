@@ -1,22 +1,17 @@
 /**
-* @file main.cpp
- * @brief Point d'entrée principal de l'application GestionLog.
+* @file menu.cpp
+ * @brief Implémentation des fonctions du module Menu.
  * @author Xavier de-oliveira
  * @version v1.0
- * @class BTS-CIEL IR
  * @date 18/11/2025
  */
 
-#include <iostream> // Inclusion de la bibliothèque standard pour les entrées/sorties
-#include "Menu/menu.h"
+#include "menu.h"      // On inclut le fichier header associé
+#include <iostream>    // Nécessaire pour cout et endl
 
-using namespace std; // Permet d'utiliser les éléments standard (comme cout) sans préfixe std:
+using namespace std;
 
-/**
- * @fn void afficherMenu()
- * @brief Affiche le menu de l'application.
- * @return void
- */
+// Fonction déplacée depuis le main.cpp
 void afficherMenu() {
     cout << "Menu" << endl;
     cout << " Choisir une option" << endl;
@@ -28,12 +23,7 @@ void afficherMenu() {
     cout << "0 - Sortir du programme" << endl;
 }
 
-/**
- * @fn int choisirLog(int choixLog)
- * @brief Choisir le log à afficher et/ou traiter.
- * @param int choixLog : choix du log à afficher (saisi par l'utilisateur).
- * @return int : Retourne 0 pour l'instant.
- */
+// Fonction déplacée depuis le main.cpp
 int choisirLog(int choixLog) {
     switch (choixLog) {
         case 0:
@@ -58,29 +48,5 @@ int choisirLog(int choixLog) {
             cout << "Erreur : Option invalide !" << endl;
             break;
     }
-    return 0;
-}
-
-/**
- * @fn int main()
- * @brief Point d'entrée de l'application.
- * @return int 0 si le programme s'est terminé correctement.
- */
-int main() {
-    int choix;
-
-    cout << "CIEL - Gestion centralisee de logs" << endl;
-
-    // 1. Affichage du menu
-    afficherMenu();
-
-    // 2. Saisie utilisateur
-    cout << "Votre choix : ";
-    cin >> choix;
-    cout << "Vous avez choisi l'option : " << choix << endl;
-
-    // 3. Appel de la fonction choisirLog
-    choisirLog(choix);
-
     return 0;
 }
