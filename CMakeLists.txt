@@ -13,18 +13,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 #1/3-Ajouter les fichiers sources de votre projet
 set(SRCS
-   Menu/menu.cpp
+        Menu/menu.cpp
     )
 
 #2/3-Ajouter les fichiers headers de votre projet
 set(HEADERS
-           Menu/menu.h
+        Menu/menu.h
     )
 
 #3/3-Ajouter les noms des dossiers de vos modules
 include_directories(Menu)
 
-add_executable(${ProjectId} Menu/main.cpp ${SRCS} ${HEADERS})
+add_executable(${ProjectId} main.cpp ${SRCS} ${HEADERS})
 
 ## Options ######################################################################
 #option(BUILD_TESTS "Enable to build unit tests" TRUE)
