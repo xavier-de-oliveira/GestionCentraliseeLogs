@@ -8,6 +8,7 @@
  */
 
 #include <iostream> // Inclusion de la bibliothèque standard pour les entrées/sorties
+#include "Menu/menu.h"
 
 using namespace std; // Permet d'utiliser les éléments standard (comme cout) sans préfixe std:
 
