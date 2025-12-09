@@ -1,7 +1,7 @@
 
 DOXYFILE_ENCODING      = UTF-8
 
-PROJECT_NAME           = "Nom du projet"
+PROJECT_NAME           = "Gestion centralisee des logs"
 
 PROJECT_NUMBER         = version
 
