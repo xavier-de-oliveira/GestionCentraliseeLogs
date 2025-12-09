@@ -14,16 +14,19 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #1/3-Ajouter les fichiers sources de votre projet
 set(SRCS
         Menu/menu.cpp
-    )
+        Logs/log.cpp
+)
 
 #2/3-Ajouter les fichiers headers de votre projet
 set(HEADERS
         main.h
         Menu/menu.h
-    )
+        Logs/log.h
+)
 
 #3/3-Ajouter les noms des dossiers de vos modules
 include_directories(Menu)
+include_directories(Logs)
 
 add_executable(${ProjectId} main.cpp ${SRCS} ${HEADERS})
 
