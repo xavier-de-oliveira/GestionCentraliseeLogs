@@ -2,14 +2,11 @@
 * @file menu.cpp
  * @brief Implémentation des fonctions du module Menu.
  * @author Xavier de-oliveira
- * @version v1.0
- * @date 18/11/2025
+ * @version v2.0
+ * @date 09/12/2025
  */
 
 #include "menu.h"      // On inclut le fichier header associé
-#include <iostream>    // Nécessaire pour cout et endl
-
-using namespace std;
 
 // Fonction déplacée depuis le main.cpp
 void afficherMenu() {
@@ -28,25 +25,24 @@ int choisirLog(int choixLog) {
     switch (choixLog) {
         case 0:
             cout << "Fermeture du programme..." << endl;
-            break;
+            return 0;
         case 1:
             cout << "Lancement de l'analyse des logs Sudo" << endl;
-            break;
+            return 1;
         case 2:
             cout << "Lancement de l'analyse des logs SSH" << endl;
-            break;
+            return 2;
         case 3:
             cout << "Appel de pocoGetAllLog" << endl;
-            break;
+            return 3;
         case 4:
             cout << "Appel de pocoGetOneLog" << endl;
-            break;
+            return 4;
         case 5:
             cout << "Appel de pocoPostSSHLog" << endl;
-            break;
+            return 5;
         default:
             cout << "Erreur : Option invalide !" << endl;
-            break;
+            return -1;
     }
-    return 0;
 }

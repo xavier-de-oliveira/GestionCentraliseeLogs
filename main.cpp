@@ -1,37 +1,29 @@
 /**
 * @file main.cpp
  * @brief Point d'entrée principal de l'application GestionLog.
- * @author Xavier de-oliveira
- * @version v1.0
- * @class BTS-CIEL IR
+ * @author Xavier De-Oliveira
+ * @version v2.0
  * @date 18/11/2025
  */
 
-#include <iostream>
-#include "Menu/menu.h" // Inclusion obligatoire pour utiliser afficherMenu et choisirLog
+#include "main.h"
 
 using namespace std;
 
-/**
- * @fn int main()
- * @brief Point d'entrée de l'application.
- * @return int 0 si le programme s'est terminé correctement.
- */
-int main() {
-    int choix;
 
-    cout << "CIEL - Gestion centralisee de logs" << endl;
-
-    // 1. Affichage du menu (Appel via le module Menu)
+int main(){
+    int choix = 0;
     afficherMenu();
-
-    // 2. Saisie utilisateur
     cout << "Votre choix : ";
     cin >> choix;
-    cout << "Vous avez choisi l'option : " << choix << endl;
-
-    // 3. Appel de la fonction choisirLog (Appel via le module Menu)
-    choisirLog(choix);
-
+    if (!cin.good()) {
+        cout << "Erreur de saisie." << endl << endl;
+        cin.clear(); // Effacer les indicateurs d'erreur
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // on vide tout
+        main();
+    } else {
+        cout << "Votre choix est : " << choix << endl;
+        choisirLog(choix);
+    }
     return 0;
 }
