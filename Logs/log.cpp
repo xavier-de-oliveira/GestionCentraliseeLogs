@@ -14,18 +14,18 @@
 
 using namespace std;
 
-// Partie 2.1 : Ouverture et écriture [cite: 71]
+// Partie 2.1 : Ouverture et écriture
 void testEcritureFichier() {
     // ofstream = Output File Stream (pour ÉCRIRE)
     ofstream monFichier("test.txt");
 
     if (monFichier.is_open()) {
-        // Écriture de plusieurs lignes comme demandé [cite: 74]
+        // Écriture de plusieurs lignes comme demandé
         monFichier << "Ligne 1 : Ceci est un test d'écriture." << endl;
         monFichier << "Ligne 2 : Le module Logs fonctionne." << endl;
         monFichier << "Ligne 3 : Fin du test." << endl;
 
-        // Fermeture du fichier (étape 2.3) [cite: 86]
+        // Fermeture du fichier (étape 2.3)
         monFichier.close();
         cout << "--> Fichier test.txt écrit avec succès." << endl;
     } else {
@@ -33,7 +33,7 @@ void testEcritureFichier() {
     }
 }
 
-// Partie 2.2 : Ouverture et lecture [cite: 82]
+// Partie 2.2 : Ouverture et lecture 
 void testLectureFichier() {
     // ifstream = Input File Stream (pour LIRE)
     ifstream monFichier("test.txt");
